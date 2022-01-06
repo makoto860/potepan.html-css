@@ -4,16 +4,7 @@ body {
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    -webkit-font-smoothing: antialiased;
 }
-
-
-
-
-
-
-
-
 
 /*header*/
 .Header {
@@ -33,17 +24,6 @@ body {
 }
 
 /*a*/
-@media screen and (min-width: 768px) {
-    .HeaderLogo {
-        transition:opacity 0.2s
-    }
-
-    .HeaderLogo:hover {
-        opacity:0.8
-    }
-}
-
-/*a*/
 a {
     color: #000;
     text-decoration: none;
@@ -54,11 +34,6 @@ a {
     display: block;
     height: 20px;
     width: auto;
-}
-
-/*img hover色指定*/
-.HeaderLogo__image--pc:hover {
- background: #696969; 
 }
 
 /*img*/
@@ -90,17 +65,6 @@ ul{
     justify-content: space-between;
 }
 
-/*li media*/
-@media screen and (min-width: 768px) {
-    .HeaderNavListItem {
-        transition:opacity 0.2s
-    }
-
-    .HeaderNavListItem:hover {
-        opacity:0.8
-    }
-}
-
 /*li*/
 .HeaderNavListItem {
     margin-right: 45px;
@@ -110,9 +74,9 @@ ul{
 .HeaderNavListItem__link {
     display: block;
 }
-/*a potepancamp色変更*/
+/*a contentなど色変更*/
 .HeaderNavListItem__link:hover {
-  background: #E72458;
+  color: red;
 }
 
 
@@ -144,17 +108,6 @@ ul{
 }
 
 /*a*/
-@media screen and (min-width: 768px) {
-    .HeaderNavListItem__button {
-        transition:opacity 0.2s
-    }
-
-    .HeaderNavListItem__button:hover {
-        opacity:0.8
-    }
-}
-
-/*a*/
 .HeaderNavListItem__button {
     align-items: center;
     background-color: #F79214;
@@ -174,13 +127,10 @@ ul{
     padding: 0 20px;
 }
 
+/*a無料カウンセリングの色変更*/
 .HeaderNavListItem__button:hover {
-  background-color: #00bfff;
+    color: red;
 }
-
-
-
-
 
 
 
@@ -188,6 +138,8 @@ ul{
 main {
     display: block;
 }
+
+
 
 /*section*/
 .FirstView {
@@ -267,16 +219,9 @@ main {
     color: #fff;
 }
 
+/*無料カウンセリングはこちら色変更*/
 .FirstViewContent__buttons a:first-of-type:hover {
-  background-color: green;
-}
-
-
-/*a*/
-@media screen and (min-width: 768px) {
-    .FirstViewContent__buttons a {
-        transition: opacity 0.2s;
-    }
+  color: red;
 }
 
 /*a*/
@@ -319,8 +264,9 @@ main {
     width: 176px;
 }
 
+/*a資料請求はこちら色変更*/
 .FirstViewContent__buttons a:last-of-type:hover {
-background-color: #008000;
+    color: red;
 }
 
 /*a*/
@@ -356,9 +302,7 @@ p {
 
 
 
-
-
-/*02*/
+                                           /*02*/
 /*div*/
 .AboutWrapper {
     background-color: #F79214;
@@ -414,6 +358,8 @@ p {
     display: none;
 }
 
+
+
 /*p*/
 .About__title p {
     font-size: 16px;
@@ -425,14 +371,7 @@ p {
 
 /*div*/
 .About__button {
-    width: 250px;
-}
-
-/*a*/
-@media screen and (min-width: 768px) {
-    .About__button a {
-        transition: opacity 0.2s;
-    }
+    width: 250px;    
 }
 
 /*a*/
@@ -453,9 +392,10 @@ p {
     color: #F79214 !important;
     background-color: #fff;
 }
-/**/
+
+/*CONTENT学習内容色指定*/
 .About__button a:hover {
-  background-color: #c0c0c0;
+    color: red !important;
 }
 
 /*span*/
@@ -464,6 +404,7 @@ p {
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
+    
 }
 
 /*span*/
@@ -472,19 +413,424 @@ p {
     line-height: 18px;
 }
 
-.button, .result{
-  width: 200px;
-  height: 100px;
-  padding: 20px 0;
-  box-sizing: border-box;
-  text-align: center;
-  color: #fff;
-  background: #66b6d5;
-  border-radius: 10px;
-  margin-bottom: 10px;
+                                  /*レスポンシブheader*/
+@media screen and (max-width: 1080px) {
+    .Header--recruit {
+        background-color:unset !important;
+        position: absolute !important
+    }
 }
 
-.button:hover + .result{
-  background: #E72458;
+@media screen and (max-width: 1080px) {
+    .Header {
+        background-color:#fff;
+        position: fixed;
+        z-index: 10
+    }
 }
 
+@media screen and (max-width: 767px) {
+    .Header {
+        padding-top:15px;
+        padding-bottom: 15px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderContainer {
+        max-width:100%;
+        margin: 0 20px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderLogo {
+        transition:opacity 0.2s
+    }
+
+    .HeaderLogo:hover {
+        opacity: 0.8
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderLogo__image--pc {
+        display:none
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderLogo__image--sp {
+        display:block
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavList {
+        overflow-y:scroll;
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 75px;
+        transition: transform 0.5s;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.8);
+        -webkit-overflow-scrolling: touch;
+        height: 100%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderNavList {
+        top:52px
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavList.is-active {
+        transform:translate3d(-100%, 0, 0)
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavList.is-scroll {
+        top:60px;
+        bottom: 0
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .HeaderNavList.is-scroll {
+        top:52px;
+        bottom: 0
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderNavListItem {
+        transition:opacity 0.2s
+    }
+
+    .HeaderNavListItem:hover {
+        opacity: 0.8
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem {
+        margin-right:0
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem:last-of-type {
+        margin-top:20px
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem__link {
+        padding:20px 0
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem__link>span:first-child {
+        font-size:16px;
+        letter-spacing: 5px;
+        color: #fff
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem__link>span:last-child {
+        font-size:12px;
+        margin-top: 10px;
+        color: #F79214;
+        letter-spacing: 2px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderNavListItem__button {
+        transition:opacity 0.2s
+    }
+
+    .HeaderNavListItem__button:hover {
+        opacity: 0.8
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavListItem__button {
+        font-size:16px;
+        margin: 0 auto;
+        height: 60px;
+        width: 250px
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger {
+        cursor:pointer;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 21px;
+        z-index: 100
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger__line {
+        position:absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        transform: translate(0, -50%);
+        border-radius: 10px;
+        transition: top 0.2s, transform 0.2s, opacity 0.3s
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger__line:first-child {
+        top:0
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger__line:last-child {
+        top:100%
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .is-active .HeaderNavHamburger__line {
+        will-change:top;
+        transform: translate(20px, -50%);
+        opacity: 0
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .is-active .HeaderNavHamburger__line:first-child {
+        top:50%;
+        transform: translate(0, -50%) rotate(45deg);
+        opacity: 1
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .is-active .HeaderNavHamburger__line:last-child {
+        top:50%;
+        transform: translate(0, -50%) rotate(-45deg);
+        opacity: 1
+    }
+}
+
+                                  /*main レスポンシブ*/
+@media screen and (max-width: 1080px) {
+    main {
+        padding-top:60px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        padding-top:52px
+    }
+}
+
+                                  /*firstviewレスポンシブ*/
+@media screen and (max-width: 767px) {
+    .FirstView {
+        background-image:none;
+        padding-top: 0;
+        padding-bottom: 35px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView__main-image--sp {
+        display:block
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView__container {
+        max-width:none;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView__container {
+        margin-top:-45vw
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent {
+        margin-bottom:20px;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__title {
+        font-size:25px;
+        line-height: 36px;
+        margin-left: calc(((100vw - 100%) / 2) * -1);
+        margin-right: calc(((100vw - 100%) / 2) * -1)
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__images {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__images img {
+        width:27.5%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__buttons {
+        flex-direction:column
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewContent__buttons a {
+        transition:opacity 0.2s
+    }
+
+    .FirstViewContent__buttons a:hover {
+        opacity: 0.8
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__buttons a {
+        font-size:14px;
+        width: 100% !important
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__buttons a:first-of-type {
+        margin-right:0;
+        margin-bottom: 10px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstViewContent__buttons a:last-of-type {
+        height:45px
+    }
+}
+
+                                  /*aboutレスポンシブ*/
+@media screen and (max-width: 767px) {
+    .AboutWrapper {
+        padding:30px 0
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About {
+        max-width:none;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .About {
+        flex-direction:column
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title {
+        margin-bottom:40px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title h2 {
+        font-size:30px !important;
+        line-height: 1.2;
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title h2 span {
+        font-size:30px;
+        letter-spacing: 1px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title p {
+        font-size:16px;
+        line-height: 21px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .About__title {
+        margin-bottom:0;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title h2 {
+        font-size:30px !important;
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title h2>span {
+        font-size:33px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .About__title br {
+        display:block
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .About__button {
+        margin-top:40px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .About__button a {
+        transition:opacity 0.2s
+    }
+
+    .About__button a:hover {
+        opacity: 0.8
+    }
+}
