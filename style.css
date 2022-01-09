@@ -1,3 +1,4 @@
+/*課題１提出用です。.HeaderNavHamburgerの修正をしました。レビューお願いします。*/
 /*body*/
 body {
     color: #000;
@@ -23,6 +24,11 @@ body {
     position: relative;
 }
 
+/*div*/
+.HeaderNavHamburger {
+    display: none;
+}
+
 /*a*/
 a {
     color: #000;
@@ -38,6 +44,7 @@ a {
 
 /*img*/
 .HeaderLogo__image--sp {
+    display: none;
     height: 16px;
     width: auto;
 }
@@ -358,8 +365,6 @@ p {
     display: none;
 }
 
-
-
 /*p*/
 .About__title p {
     font-size: 16px;
@@ -371,7 +376,7 @@ p {
 
 /*div*/
 .About__button {
-    width: 250px;    
+    width: 250px;
 }
 
 /*a*/
