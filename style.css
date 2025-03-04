@@ -1,21 +1,28 @@
-/*課題１提出用です。.HeaderNavHamburgerの修正をしました。レビューお願いします。*/
-/*body*/
+/*レビューお願いします。*/
+
+nav {
+    unicode-bidi: isolate;
+}
+
 body {
-    color: #000;
+    color: #333;
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 14px;
     font-weight: 500;
+    -webkit-font-smoothing: antialiased;
 }
 
-/*header*/
 .Header {
     width: 100%;
-    position: absolute;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: #fff;
+    display: grid;
+    height: 70px;
 }
 
-/*div*/
+.Header--common {
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
 .HeaderContainer {
     display: flex;
     justify-content: space-between;
@@ -24,97 +31,113 @@ body {
     position: relative;
 }
 
-/*div*/
-.HeaderNavHamburger {
-    display: none;
+.HeaderLogo {
+    align-self: center;
 }
 
-/*a*/
+@media screen and (min-width: 768px) {
+    .HeaderLogo {
+        transition: opacity 0.2s;
+    }
+}
+
 a {
-    color: #000;
+    color: #333;
     text-decoration: none;
 }
 
-/*img*/
+img.lazy {
+    min-height: 1px;
+}
+
 .HeaderLogo__image--pc {
     display: block;
     height: 20px;
     width: auto;
 }
 
-/*img*/
+.HeaderLogo__image--pc:hover {
+    opacity: 0.2s;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
 .HeaderLogo__image--sp {
     display: none;
     height: 16px;
     width: auto;
 }
 
-/*img*/
-img {
-    border: 0;
-    vertical-align: middle;
-}
-
-/*nav*/
-.HeaderContainer > *:last-child {
+.HeaderContainer>*:last-child {
     display: inline-flex;
 }
 
-/*ul*/
-ul{
-    list-style: none;
+.HeaderNavHamburger {
+    display: none;
 }
 
-/*ul*/
 .HeaderNavList {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-/*li*/
+ul {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .HeaderNavListItem {
+        transition: opacity 0.2s;
+    }
+}
+
 .HeaderNavListItem {
     margin-right: 45px;
 }
 
-/*a*/
+.HeaderNavListItem__link:hover {
+    opacity: 0.2s;
+}
+
 .HeaderNavListItem__link {
     display: block;
 }
-/*a contentなど色変更*/
-.HeaderNavListItem__link:hover {
-  color: red;
+
+.HeaderNavListItem__link>span:first-child {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    line-height: 14.4px;
 }
 
-
-/*span*/
-.HeaderNavListItem__link > span:first-child {
-    font-family: 'Lato', sans-serif;
-}
-
-/*span*/
-.HeaderNavListItem__link > span {
+.HeaderNavListItem__link>span {
     display: block;
     font-weight: 700;
     text-align: center;
 }
 
-/*span*/
-.HeaderNavListItem__link > span:last-child {
+.HeaderNavListItem__link>span:last-child {
     font-size: 10px;
 }
 
-/*li*/
 .HeaderNavListItem:last-of-type {
     margin-right: 0;
 }
 
-/*a*/
-.HeaderNavListItem__button:visited {
-    color: #fff;
+@media screen and (min-width: 768px) {
+    .HeaderNavListItem__button {
+        transition: opacity 0.2s;
+    }
 }
 
-/*a*/
+.HeaderNavListItem__button:hover {
+    opacity: 0.2s;
+}
+
 .HeaderNavListItem__button {
     align-items: center;
     background-color: #F79214;
@@ -134,708 +157,117 @@ ul{
     padding: 0 20px;
 }
 
-/*a無料カウンセリングの色変更*/
-.HeaderNavListItem__button:hover {
-    color: red;
-}
-
-
-
-/*main*/
 main {
     display: block;
 }
 
-
-
-/*section*/
-.FirstView {
-    background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
-    background-size: cover;
-    background-position: center;
-    padding-top: 100px;
-    padding-bottom: 28px;
+section {
+    display: block;
+    unicode-bidi: isolate;
 }
 
-/*img*/
-.FirstView__main-image--sp {
+.FirstView {
+    position: relative;
+    height: 739px;
+}
+
+.FirstView__bg-image {
+    position: absolute;
+    z-index: -1;
+}
+
+.FirstView__bg-image--left-rectangle {
+    top: -70px;
+    left: 0;
+}
+
+.FirstView__bg-image--right-rectangle {
+    right: 0;
+    bottom: 70px;
+}
+
+.FirstView__bg-image--fill-rectangle {
+    top: 84px;
+    left: -70px;
+}
+
+.FirstView__bg-image--main-visual {
+    top: -70px;
+    right: 0;
+    width: 775px;
+}
+
+.FirstView__whole-image {
     display: none;
 }
 
-/*img*/
-.FirstView__main-image {
-    width: 100%;
-}
-
-/*div*/
 .FirstView__container {
-    max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1040px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    padding-top: 219px;
 }
 
-/*div*/
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
 .FirstViewContent {
-    margin-bottom: 70px;
+    position: relative;
     width: fit-content;
 }
 
-/*h2*/
 .FirstViewContent__title {
-    color: #000;
-    font-family: 'Lato', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 54px;
-    margin-bottom: 15px;
-    text-align: center;
+    color: #333;
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 63px;
+    margin-bottom: 16px;
 }
 
-/*div*/
-.FirstViewContent__images {
-    margin-bottom: 25px;
+.FirstViewContent__badge-image {
+    position: absolute;
+    top: -105px;
+    right: -150px;
 }
 
-/*img*/
-.FirstViewContent__images img {
-    margin-right: 8px;
+@media screen and (min-width: 768px) {
+    .FirstViewContent__button {
+        transition: opacity 0.2s;
+    }
 }
 
-/*img*/
-.FirstViewContent__images img:nth-of-type(2) {
-    width: 40%;
+.FirstViewContent__button:hover {
+    opacity: 0.2s;
 }
 
-/*img*/
-.FirstViewContent__images img:last-of-type {
-    margin-right: 0;
-}
-
-/*div*/
-.FirstViewContent__buttons {
-    display: flex;
-}
-
-/*a*/
-.FirstViewContent__buttons a:first-of-type {
-    margin-right: 15px;
-    width: 306px;
-    color: #fff;
-}
-
-/*無料カウンセリングはこちら色変更*/
-.FirstViewContent__buttons a:first-of-type:hover {
-  color: red;
-}
-
-/*a*/
-.FirstViewContent__buttons a {
+.FirstViewContent__button {
     align-items: center;
     background-color: #F79214;
     border: none;
     border-radius: 38px;
+    color: #fff;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     font-size: 16px;
     font-weight: 700;
+    height: 64px;
     justify-content: center;
     text-decoration: none;
     text-align: center;
-    height: 64px;
+    width: 100%;
+    margin-bottom: 16px;
 }
 
-/*a 資料請求はこちら*/
-.FirstViewContent__buttons a {
-    align-items: center;
-    border-radius: 38px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 700;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    height: 64px;
-}
-
-/*a*/
-.FirstViewContent__buttons a:last-of-type {
-    background-color: #fff;
-    border: 1px solid #E0E0E0;
-    color: #333333;
-    width: 176px;
-}
-
-/*a資料請求はこちら色変更*/
-.FirstViewContent__buttons a:last-of-type:hover {
-    color: red;
-}
-
-/*a*/
-.FirstViewContent__buttons a {
-    align-items: center;
-    border-radius: 38px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 700;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    height: 64px;
-}
-
-/*p*/
-.FirstViewCaption {
-    color: #A2A2A4;
-    font-size: 12px;
-}
-
-/*p*/
 p {
-    line-height: 1.5;
+    color: #333;
 }
 
-/*a*/
-.FirstViewCaption a {
-    color: #A2A2A4;
-}
-
-
-
-                                           /*02*/
-/*div*/
-.AboutWrapper {
-    background-color: #F79214;
-    padding: 45px 0;
-}
-
-/*section*/
-.About {
-    max-width: 1140px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-/*div*/
-.About__title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 0;
-    width: 53%;
-}
-
-/*h2*/
-.About__title h2 {
-    font-size: 40px;
-    letter-spacing: 1px;
-    width: 100%;
-    font-weight: 700;
-    line-height: 74px;
-}
-
-/*h2*/
-.About__title h2, .About__title p {
-    color: #fff;
-    text-align: left;
-}
-
-/*span*/
-.About__title h2 > span {
-    font-size: 50px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
-}
-
-/*br*/
-.About__title br {
-    display: none;
-}
-
-/*p*/
-.About__title p {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-    margin-top: 15px;
-    display: inline-block;
-}
-
-/*div*/
-.About__button {
-    width: 250px;
-}
-
-/*a*/
-.About__button a {
-    align-items: center;
-    border: none;
-    border-radius: 38px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 700;
-    height: 64px;
-    justify-content: center;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    color: #F79214 !important;
-    background-color: #fff;
-}
-
-/*CONTENT学習内容色指定*/
-.About__button a:hover {
-    color: red !important;
-}
-
-/*span*/
-.About__button a span:first-child {
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    
-}
-
-/*span*/
-.About__button a span:last-child {
+.FirstViewContent__caption {
     font-size: 12px;
-    line-height: 18px;
-}
-
-                                  /*レスポンシブheader*/
-@media screen and (max-width: 1080px) {
-    .Header--recruit {
-        background-color:unset !important;
-        position: absolute !important
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .Header {
-        background-color:#fff;
-        position: fixed;
-        z-index: 10
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .Header {
-        padding-top:15px;
-        padding-bottom: 15px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderContainer {
-        max-width:100%;
-        margin: 0 20px
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .HeaderLogo {
-        transition:opacity 0.2s
-    }
-
-    .HeaderLogo:hover {
-        opacity: 0.8
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderLogo__image--pc {
-        display:none
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderLogo__image--sp {
-        display:block
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavList {
-        overflow-y:scroll;
-        position: fixed;
-        top: 60px;
-        left: 100%;
-        width: 100%;
-        display: block;
-        padding-top: 20px;
-        padding-bottom: 75px;
-        transition: transform 0.5s;
-        z-index: 99;
-        background-color: rgba(0, 0, 0, 0.8);
-        -webkit-overflow-scrolling: touch;
-        height: 100%
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderNavList {
-        top:52px
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavList.is-active {
-        transform:translate3d(-100%, 0, 0)
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavList.is-scroll {
-        top:60px;
-        bottom: 0
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .HeaderNavList.is-scroll {
-        top:52px;
-        bottom: 0
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .HeaderNavListItem {
-        transition:opacity 0.2s
-    }
-
-    .HeaderNavListItem:hover {
-        opacity: 0.8
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem {
-        margin-right:0
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem:last-of-type {
-        margin-top:20px
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem__link {
-        padding:20px 0
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem__link>span:first-child {
-        font-size:16px;
-        letter-spacing: 5px;
-        color: #fff
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem__link>span:last-child {
-        font-size:12px;
-        margin-top: 10px;
-        color: #F79214;
-        letter-spacing: 2px
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .HeaderNavListItem__button {
-        transition:opacity 0.2s
-    }
-
-    .HeaderNavListItem__button:hover {
-        opacity: 0.8
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavListItem__button {
-        font-size:16px;
-        margin: 0 auto;
-        height: 60px;
-        width: 250px
-    }
-}
-
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavHamburger {
-        cursor:pointer;
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 21px;
-        z-index: 100
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavHamburger__line {
-        position:absolute;
-        top: 50%;
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #000;
-        transform: translate(0, -50%);
-        border-radius: 10px;
-        transition: top 0.2s, transform 0.2s, opacity 0.3s
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavHamburger__line:first-child {
-        top:0
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .HeaderNavHamburger__line:last-child {
-        top:100%
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .is-active .HeaderNavHamburger__line {
-        will-change:top;
-        transform: translate(20px, -50%);
-        opacity: 0
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .is-active .HeaderNavHamburger__line:first-child {
-        top:50%;
-        transform: translate(0, -50%) rotate(45deg);
-        opacity: 1
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .is-active .HeaderNavHamburger__line:last-child {
-        top:50%;
-        transform: translate(0, -50%) rotate(-45deg);
-        opacity: 1
-    }
-}
-
-                                  /*main レスポンシブ*/
-@media screen and (max-width: 1080px) {
-    main {
-        padding-top:60px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    main {
-        padding-top:52px
-    }
-}
-
-                                  /*firstviewレスポンシブ*/
-@media screen and (max-width: 767px) {
-    .FirstView {
-        background-image:none;
-        padding-top: 0;
-        padding-bottom: 35px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstView__main-image--sp {
-        display:block
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstView__container {
-        max-width:none;
-        padding-left: 20px;
-        padding-right: 20px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstView__container {
-        margin-top:-45vw
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent {
-        margin-bottom:20px;
-        width: 100%
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__title {
-        font-size:25px;
-        line-height: 36px;
-        margin-left: calc(((100vw - 100%) / 2) * -1);
-        margin-right: calc(((100vw - 100%) / 2) * -1)
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__images {
-        display:flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-        width: 100%
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__images img {
-        width:27.5%
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__buttons {
-        flex-direction:column
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .FirstViewContent__buttons a {
-        transition:opacity 0.2s
-    }
-
-    .FirstViewContent__buttons a:hover {
-        opacity: 0.8
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__buttons a {
-        font-size:14px;
-        width: 100% !important
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__buttons a:first-of-type {
-        margin-right:0;
-        margin-bottom: 10px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .FirstViewContent__buttons a:last-of-type {
-        height:45px
-    }
-}
-
-                                  /*aboutレスポンシブ*/
-@media screen and (max-width: 767px) {
-    .AboutWrapper {
-        padding:30px 0
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About {
-        max-width:none;
-        padding-left: 20px;
-        padding-right: 20px
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .About {
-        flex-direction:column
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title {
-        margin-bottom:40px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title h2 {
-        font-size:30px !important;
-        line-height: 1.2;
-        text-align: center
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title h2 span {
-        font-size:30px;
-        letter-spacing: 1px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title p {
-        font-size:16px;
-        line-height: 21px
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .About__title {
-        margin-bottom:0;
-        width: 100%
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title h2 {
-        font-size:30px !important;
-        text-align: center
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title h2>span {
-        font-size:33px
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .About__title br {
-        display:block
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .About__button {
-        margin-top:40px
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .About__button a {
-        transition:opacity 0.2s
-    }
-
-    .About__button a:hover {
-        opacity: 0.8
-    }
+    line-height: 16px;
 }
