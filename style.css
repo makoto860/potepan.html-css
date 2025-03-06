@@ -47,7 +47,7 @@ img.lazy {
 }
 
 .HeaderLogo__image--pc:hover {
-    opacity: 0.2s;
+    opacity: 0.7;
 }
 
 img {
@@ -81,7 +81,7 @@ ul {
 }
 
 .HeaderNavListItem__link:hover {
-    opacity: 0.2s;
+    opacity: 0.7;
 }
 
 .HeaderNavListItem {
@@ -113,7 +113,7 @@ ul {
 }
 
 .HeaderNavListItem__button:hover {
-    opacity: 0.2s;
+    opacity: 0.7;
 }
 
 .HeaderNavListItem__button {
@@ -203,7 +203,7 @@ main {
 }
 
 .FirstViewContent__button:hover {
-    opacity: 0.2s;
+    opacity: 0.7;
 }
 
 .FirstViewContent__button {
