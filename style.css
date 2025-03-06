@@ -10,6 +10,9 @@ body {
 
 .Header {
     width: 100%;
+}
+
+.Header {
     background-color: #fff;
     display: grid;
     height: 70px;
@@ -266,6 +269,7 @@ p {
         transition: opacity 0.2s;
     }
 }
+
 @media screen and (max-width: 767px) {
     .HeaderLogo__image--pc {
         display: none !important;
@@ -298,6 +302,18 @@ p {
 @media screen and (max-width: 1080px) {
     .HeaderNavHamburger__line:first-child {
         top: 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .HeaderNavHamburger {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 17px;
+        margin: auto;
+        z-index: 100;
     }
 }
 
